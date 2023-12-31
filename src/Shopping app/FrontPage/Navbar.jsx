@@ -5,7 +5,7 @@ import { getAuth  } from 'firebase/auth'
 
 
 const Navbar = ({setData, cart, user, setUser}) => {
-  
+    const navigate = useNavigate();
   const auth = getAuth();
   useEffect(() => {
     if (auth.currentUser && auth.currentUser.email !== null) {
@@ -27,7 +27,7 @@ const Navbar = ({setData, cart, user, setUser}) => {
       setData(filterProduct)
     }
 
-    const navigate = useNavigate();
+  
     
     const [searchProducts, SetSearchProduct] = useState('');
 
