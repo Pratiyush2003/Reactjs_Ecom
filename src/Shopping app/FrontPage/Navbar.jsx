@@ -17,7 +17,7 @@ const Navbar = ({setData, cart, user, setUser}) => {
  
   const logOut = async () => {
       await auth.signOut()
-      navigate('/')
+      navigate('/login')
   }
     
 
