@@ -39,7 +39,9 @@ const ProductDetails = ({cart, setCart}) => {
 
   return (
     <div>
+
         <div className="container-fluid ">
+        
         <div className="card mb-3 mt-6" >
             <div className="row g-0">
                 <div className="col-md-4 pr-5" style={{paddingLeft : '30px'}}>

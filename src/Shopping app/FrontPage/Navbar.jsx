@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { items } from '../../Data'
-import { getAuth } from 'firebase/auth'
+import { getAuth  } from 'firebase/auth'
 
 
 const Navbar = ({setData, cart, user, setUser}) => {
@@ -11,11 +11,14 @@ const Navbar = ({setData, cart, user, setUser}) => {
     if (auth.currentUser && auth.currentUser.email !== null) {
       setUser(auth.currentUser.email);
     } else {
-      setUser('no');
+      setUser('No User');
     }
   }, [auth.currentUser]);
  
-  console.log(user)
+  const logOut = async () => {
+      await auth.signOut()
+      navigate('/')
+  }
     
 
     console.log(user)
@@ -62,6 +65,9 @@ const Navbar = ({setData, cart, user, setUser}) => {
                           </li>
                           <li className="nav-item mt-3">
                           <Link to={'/login'}><button className='btn btn-outline-primary'>Login</button></Link> 
+                          </li>
+                          <li className="nav-item mt-3">
+                          <button className='btn btn-outline-danger' onClick={logOut}>Logout</button>
                           </li>
                       <li className="nav-item dropdown mt-4">
                         <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
