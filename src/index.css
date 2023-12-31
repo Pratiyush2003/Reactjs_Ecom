@@ -1,0 +1,35 @@
+.js-icon{
+    font-size: 25px;
+}
+.js-search-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+#js-search{
+        width: 50vw;
+        height: 40px;
+        border-radius: 10px;
+        outline: none;
+        padding: 10px;
+        border: 2px solid gray;
+}
+.js-cart-icon{
+        font-size: 25px;
+}
+.js-price-calcualation{
+        border: 2px solid blue;
+}
+.js-buy-product{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+}
+.js-container{
+        margin: 5% 0% 5% 0%;
+        display: inline-block;
+        padding: 5%;
+}
+.js-product{
+        text-decoration: none !important;
+}
