@@ -15,6 +15,7 @@ const Login = () => {
             Email,
             password
         )
+        console.log(user);
       navigate('/')
     }
 
